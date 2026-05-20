@@ -5,7 +5,8 @@
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build"
   },
   "keywords": [
     "ecosystem:cordova"
@@ -13,15 +14,14 @@
   "author": "Apache Cordova Team",
   "license": "Apache-2.0",
   "dependencies": {
-    "@tomtom-org/maps-sdk": "^0.46.13"
+    "@capacitor/cli": "^8.3.1",
+    "@capacitor/core": "^8.3.1",
+    "@tomtom-org/maps-sdk": "^0.46.13",
+    "dotenv": "^17.4.2"
   },
   "devDependencies": {
     "cordova-android": "^15.0.0",
     "vite": "^8.0.10"
-  },
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build"
   },
   "cordova": {
     "platforms": [

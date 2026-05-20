@@ -1,12 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <title>Default map</title>
-        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+        <!-- <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"> -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'self' data: gap: https://*.tomtom.com blob:; style-src 'self' 'unsafe-inline' https://unpkg.com;">
         <link rel="icon" href="data:,">
     </head>
-    <body>
-        <div id="sdk-map"></div>
+
+    <body id="doc">
+        <div id="sdk-map" allow="geolocation"></div>
         <script type="module" src="./index.js"></script>
     </body>
+
+    <style>
+        #sdk-map {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        p {
+            position: absolute;
+            z-index: 1;
+        }
+
+        body button {
+            background-color: #ccffcc;
+            position: absolute;
+            z-index: 1;
+            width: 5em;
+            height: 5em;
+            border-radius: 50%;
+            border: none;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            cursor: pointer;
+            outline: none;
+        }
+
+        button svg {
+            color: #222222;
+            background-color: none;
+            width: 70%;
+            height: 70%;
+        }
+    </style>
 </html>

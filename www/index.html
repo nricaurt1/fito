@@ -2,8 +2,7 @@
 <html lang="es">
     <head>
         <title>Default map</title>
-        <!-- <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"> -->
-        <meta http-equiv="Content-Security-Policy" content="default-src * 'self' data: gap: https://*.tomtom.com blob:; style-src 'self' 'unsafe-inline' https://unpkg.com;">
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
         <link rel="icon" href="data:,">
     </head>
 
@@ -27,13 +26,14 @@
         }
 
         body button {
-            background-color: #ccffcc;
+            background-color: #ffcc66;
             position: absolute;
             z-index: 1;
             width: 5em;
             height: 5em;
             border-radius: 50%;
-            border: none;
+            border-color: #000000;
+            border: 0.3em;
             align-items: center;
             justify-content: center;
             display: flex;
@@ -41,8 +41,13 @@
             outline: none;
         }
 
+        #boton_agregar_id {
+            top: 85%;
+            left: 1em;
+        }
+
         button svg {
-            color: #222222;
+            color: #000000;
             background-color: none;
             width: 70%;
             height: 70%;
